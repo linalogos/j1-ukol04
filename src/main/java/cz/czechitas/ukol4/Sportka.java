@@ -10,7 +10,7 @@ import java.util.stream.IntStream;
  * Třída pro losování Sportky.
  */
 public class Sportka {
-  private List<Integer> osudi = new ArrayList<>();
+  private final List<Integer> osudi;
 
   public Sportka() {
     int zacatek = 1;
@@ -38,7 +38,7 @@ public class Sportka {
    */
   public List<Integer> vylosovanaCisla() {
     List<Integer> seznamVylosovanychCisel = new ArrayList<>();
-    seznamVylosovanychCisel = osudi.subList(0, 6);
+    seznamVylosovanychCisel = osudi.subList(0, 5);
     return seznamVylosovanychCisel;
   }
 
@@ -48,7 +48,7 @@ public class Sportka {
    * @return Dodatkové číslo.
    */
   public Integer dodatkoveCislo() {
-    int sedmeCislo = osudi.get(7);
+    int sedmeCislo = osudi.get(6);
     return sedmeCislo;
   }
 }
